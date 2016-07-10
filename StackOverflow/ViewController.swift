@@ -10,6 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var webView: UIWebView!
     
     // When view loads
     override func viewDidLoad() {
@@ -26,7 +27,16 @@ class ViewController: UIViewController {
             
             if let urlContent = data {
                 
-                print(urlContent)
+                let webContent = String(data: urlContent,  encoding: String.Encoding.utf8)
+                
+                // Asynchronous
+                DispatchQueue.main.async(execute: {
+                    
+                    // Display on Web View
+                    self.webView.loadHTMLString(source, baseURL: nil)
+                })
+                
+                print(webContent)
                 
             } else {
                 // Show Error Message
