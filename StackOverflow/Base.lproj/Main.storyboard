@@ -21,13 +21,31 @@
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dpw-X3-Cjn">
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </webView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hQV-wC-x2x">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="aoc-ih-2Ie"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="Stack Overflow" id="G1V-bI-rES">
+                                        <barButtonItem key="rightBarButtonItem" title="Next" id="vQd-JB-Bzx">
+                                            <color key="tintColor" red="0.63828718350000002" green="0.44577444240000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <connections>
+                                                <segue destination="CYn-4X-mjt" kind="show" id="bVN-Oo-cSo"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="dpw-X3-Cjn" secondAttribute="trailing" id="9UW-Tf-Y6k"/>
-                            <constraint firstItem="dpw-X3-Cjn" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="CtW-Kd-BOq"/>
+                            <constraint firstItem="dpw-X3-Cjn" firstAttribute="top" secondItem="hQV-wC-x2x" secondAttribute="bottom" id="FBI-pV-H5T"/>
+                            <constraint firstAttribute="trailing" secondItem="hQV-wC-x2x" secondAttribute="trailing" id="IGz-mh-Mjt"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="dpw-X3-Cjn" secondAttribute="bottom" id="J4F-Ci-9s3"/>
                             <constraint firstItem="dpw-X3-Cjn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Xlt-ny-Qok"/>
+                            <constraint firstItem="hQV-wC-x2x" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="lUM-qz-0ZD"/>
+                            <constraint firstItem="hQV-wC-x2x" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="wNA-Xo-scc"/>
                         </constraints>
                     </view>
                     <connections>
@@ -36,7 +54,64 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="131.78410794602701"/>
+            <point key="canvasLocation" x="-479.19999999999999" y="176.76161919040482"/>
+        </scene>
+        <!--View Controller2-->
+        <scene sceneID="cK5-5J-aub">
+            <objects>
+                <viewController id="CYn-4X-mjt" customClass="ViewController2" customModule="StackOverflow" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="CLj-c5-UHQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="4GN-Kg-4JR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hFx-nP-q90">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ep4-yU-Wh8">
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ymO-Cg-SKJ">
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Iip-y5-aGy">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="B7q-U3-3cF"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="Second Screen" id="Plb-dt-IMf">
+                                        <barButtonItem key="backBarButtonItem" title="Back" id="y2L-7U-Mhd"/>
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="xlg-Ba-mHE">
+                                            <connections>
+                                                <segue destination="BYZ-38-t0r" kind="show" id="jqI-3c-mjv"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ep4-yU-Wh8" firstAttribute="top" secondItem="CLj-c5-UHQ" secondAttribute="bottom" id="6qe-cx-w9X"/>
+                            <constraint firstItem="ep4-yU-Wh8" firstAttribute="leading" secondItem="hFx-nP-q90" secondAttribute="leading" id="71y-LZ-hdG"/>
+                            <constraint firstItem="4GN-Kg-4JR" firstAttribute="top" secondItem="ymO-Cg-SKJ" secondAttribute="bottom" id="HFp-hh-R21"/>
+                            <constraint firstAttribute="trailing" secondItem="Iip-y5-aGy" secondAttribute="trailing" id="MCi-Bq-rTO"/>
+                            <constraint firstItem="4GN-Kg-4JR" firstAttribute="top" secondItem="ep4-yU-Wh8" secondAttribute="bottom" id="O8Q-rG-gwv"/>
+                            <constraint firstAttribute="trailing" secondItem="ep4-yU-Wh8" secondAttribute="trailing" id="PqK-kZ-qsC"/>
+                            <constraint firstItem="ymO-Cg-SKJ" firstAttribute="leading" secondItem="hFx-nP-q90" secondAttribute="leading" id="TyX-oN-vDa"/>
+                            <constraint firstItem="Iip-y5-aGy" firstAttribute="leading" secondItem="hFx-nP-q90" secondAttribute="leading" id="WEF-Sh-yqj"/>
+                            <constraint firstItem="ymO-Cg-SKJ" firstAttribute="top" secondItem="Iip-y5-aGy" secondAttribute="bottom" id="a4N-R8-EVN"/>
+                            <constraint firstItem="Iip-y5-aGy" firstAttribute="top" secondItem="CLj-c5-UHQ" secondAttribute="bottom" id="jGe-Ll-pew"/>
+                            <constraint firstAttribute="trailing" secondItem="ymO-Cg-SKJ" secondAttribute="trailing" id="mHH-dm-AIR"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="ymO-Cg-SKJ" id="FzC-dn-UaM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="F9M-KW-YaK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="376.80000000000001" y="176.76161919040482"/>
         </scene>
     </scenes>
 </document>
