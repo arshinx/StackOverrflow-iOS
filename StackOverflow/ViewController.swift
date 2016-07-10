@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let source = "http://stackoverflow.com"
+        let source = "https://stackoverflow.com"
         
         let url = URL(string: source)
         
