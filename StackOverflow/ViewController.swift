@@ -31,9 +31,7 @@ class ViewController: UIViewController {
                 
                 // Asynchronous
                 DispatchQueue.main.async(execute: {
-                    
-                    // Display on Web View
-                    self.webView.loadHTMLString(source, baseURL: nil)
+                    self.webView.loadHTMLString(String(webContent), baseURL: nil)
                 })
                 
                 print(webContent)
