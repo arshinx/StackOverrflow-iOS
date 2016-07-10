@@ -9,7 +9,9 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    
+    // When view loads
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -17,10 +19,23 @@ class ViewController: UIViewController {
         
         let url = URL(string: source)
         
+        // Set task
         let task = URLSession.shared.dataTask(with: url!) { (data, response, error) in
             
-            //
-        }
+            // When task completes
+            
+            if let urlContent = data {
+                
+                print(urlContent)
+                
+            } else {
+                // Show Error Message
+            }
+            
+        } // End Task
+        
+        // Resume Task -- need manual start
+        task.resume()
         
         
     }
