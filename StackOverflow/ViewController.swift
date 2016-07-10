@@ -34,8 +34,6 @@ class ViewController: UIViewController {
                     self.webView.loadHTMLString(String(webContent), baseURL: nil)
                 })
                 
-                print(webContent)
-                
             } else {
                 // Show Error Message
             }
